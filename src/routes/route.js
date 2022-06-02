@@ -4,6 +4,19 @@ const underscore = require('underscore')
 
 const router = express.Router();
 
+router.get('/movies', function (req, res){
+    const arr = ['Pathaan', 'Runway 34', 'Ludo', 'Jersey', 'Inception']
+    res.send(arr)
+})
+
+router.get('/movies/:indexNumber', function (req, res){
+    const arr = ['Pathaan', 'Runway 34', 'Ludo', 'Jersey', 'Inception']
+    console.log('The movie index is '+ JSON.stringify(req.params.indexNumber))
+    console.log('The movie name is '+req.params)
+    res.send(arr.index())
+
+})
+/*
 router.get('/test-me', function (req, res) {
     myHelper.printDate()
     myHelper.getCurrentMonth()
@@ -35,7 +48,7 @@ router.get('/candidates/:canidatesName', function(req, res){
     console.log('Candidates name is '+req.params.canidatesName)
     res.send('Done')
 })
-
+*/
 
 module.exports = router;
 // adding this comment for no reason
