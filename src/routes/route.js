@@ -1,7 +1,4 @@
 const express = require('express');
-const myHelper = require('../util/helper')
-const underscore = require('underscore')
-
 const router = express.Router();
 
 router.get('/movies', function (req, res){
