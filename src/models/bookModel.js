@@ -4,18 +4,20 @@ const bookSchema = new mongoose.Schema( {
    
     bookName: {
         type: String,
-        unique: true,
         required: true
     },
-    authorName: {
-        type: String,
-        required: true
+    price: {
+            indianPrice: String,
+            europeanPrice: String
     },
-    category: { 
-        type: String,
-        enum: ["thriller", "motivational", "love", "fiction"] 
+    year: {
+        type: Number,
+        default: 2021
     },
-    year: Number,
+    tags: [String],
+    authorName: String,
+    totalPages: Number,
+    stockAvailable: Boolean
 }, { timestamps: true });
 
 module.exports = mongoose.model('bookList', bookSchema) //"bookList" is the name which will reflect in database
