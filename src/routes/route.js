@@ -17,4 +17,6 @@ router.get("/booksByBhagat", AuthorController.booksByBhagat)
 
 router.get("/updateBookPrice", BookController.updateBookPrice)
 
+router.get("/booksByPrice", BookController.booksByPrice)
+
 module.exports = router;
